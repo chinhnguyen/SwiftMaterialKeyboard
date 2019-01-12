@@ -21,22 +21,22 @@ open class MaterialKeyboard: Material.View {
     // MARK: - Styling
     
     /// Return the number of rows.
-    var rowCount: Int { return 4 }
+    open var rowCount: Int { return 4 }
     
     /// Return the number of columns.
-    var columnCount: Int { return 4 }
+    open var columnCount: Int { return 4 }
     
     /// Margin around a button
-    var keyMargin: Int { return 4 }
+    open var keyMargin: Int { return 4 }
     
     /// Margin around a button
     var keyMarginX2: Int { return keyMargin * 2 }
     
     /// Size of a button in term of 1x1
-    var keySize: CGSize { return CGSize(width: 64, height: 64) }
+    open var keySize: CGSize { return CGSize(width: 64, height: 64) }
     
     /// The border thickness.
-    var borderThickness: Int = 4
+    open var borderThickness: Int = 4
     
     /// Total width of the keyboard
     var expectedWidth: Int { return (Int(keySize.width) + keyMarginX2) * columnCount + borderThickness * 2 + keyMarginX2 }
@@ -55,10 +55,10 @@ open class MaterialKeyboard: Material.View {
     func createButtons() -> [KeyboardButton] { return [] }
     
     /// Return the common return button.
-    lazy var returnButton: KeyboardButton? = { return createReturnButton() }()
+    open lazy var returnButton: KeyboardButton? = { return createReturnButton() }()
     func createReturnButton() -> KeyboardButton? { return nil }
     
-    lazy var caplockButton: KeyboardButton? = { return createCaplockButton() }()
+    open lazy var caplockButton: KeyboardButton? = { return createCaplockButton() }()
     func createCaplockButton() -> KeyboardButton? { return nil }
 
     /// The navigation handler
@@ -67,17 +67,17 @@ open class MaterialKeyboard: Material.View {
     // MARK: - Input fields
     
     /// Return ALL the text field that are bound to this keyboard.
-    var textFields: [UITextField] = [] {
+    open var textFields: [UITextField] = [] {
         didSet {
             self.navigationHandler.textFields = textFields
         }
     }
     
     /// Return the current active text field.
-    var currentTextField: UITextField?
+    open var currentTextField: UITextField?
     
     /// `true` if upppercase.
-    var allCaps = false {
+    open var allCaps = false {
         didSet {
             if let button = caplockButton, let color = allCaps ? button.titleColor(for: .highlighted) : button.titleColor(for: .normal) {
                 button.set(iconColor: color)
