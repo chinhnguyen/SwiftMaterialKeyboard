@@ -4,7 +4,7 @@ s.ios.deployment_target = '9.3'
 s.name = "SwiftMaterialKeyboard"
 s.summary = "Custom keyboard build with CosmicMind/Material and RxSwift"
 s.requires_arc = true
-s.version = "0.1.0"
+s.version = "0.1.1"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Chinh Nguyen" => "chinh@willbe.vn" }
 s.homepage = "https://github.com/chinhnguyen/SwiftMaterialKeyboard"
