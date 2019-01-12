@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.platform = :ios
-s.ios.deployment_target = '12.0'
+s.ios.deployment_target = '9.3'
 s.name = "SwiftMaterialKeyboard"
 s.summary = "Custom keyboard build with CosmicMind/Material and RxSwift"
 s.requires_arc = true
@@ -15,6 +15,5 @@ s.dependency 'RxSwift', '~> 4.4'
 s.dependency 'RxCocoa', '~> 4.4'
 s.dependency 'Material', '~> 2.16'
 s.source_files = "SwiftMaterialKeyboard/**/*.{swift}"
-s.resources = "SwiftMaterialKeyboard/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 s.swift_version = "4.2"
 end
