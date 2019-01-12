@@ -51,8 +51,8 @@ open class MaterialKeyboard: Material.View {
     // MARK: - Buttons
 
     /// Child class provide its own definition for buttons.
-    lazy var buttons: [KeyboardButton] = { return createButtons() }()
-    func createButtons() -> [KeyboardButton] { return [] }
+    open var buttons: [KeyboardButton] { return [] }
+//    func createButtons() -> [KeyboardButton] { return [] }
     
     /// Return the common return button.
     open lazy var returnButton: KeyboardButton? = { return createReturnButton() }()

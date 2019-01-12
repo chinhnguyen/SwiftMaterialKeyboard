@@ -14,6 +14,6 @@ s.dependency 'SnapKit', '~> 4.0'
 s.dependency 'RxSwift', '~> 4.0'
 s.dependency 'RxCocoa', '~> 4.0'
 s.dependency 'Material', '~> 2.12'
-s.source_files = 'SwiftMaterialKeyboard/*.swift'
+s.source_files = 'SwiftMaterialKeyboard/Classes/**/*'
 s.swift_version = '4.2'
 end

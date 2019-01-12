@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftMaterialKeyboard_Example' do
+  pod 'SwiftMaterialKeyboard', :path => '../'
+
+  target 'SwiftMaterialKeyboard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
