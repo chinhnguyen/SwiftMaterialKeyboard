@@ -8,7 +8,7 @@ s.version = "0.1.3"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Chinh Nguyen" => "chinh@willbe.vn" }
 s.homepage = "https://github.com/chinhnguyen/SwiftMaterialKeyboard"
-s.source = { :git => "git@github.com:chinhnguyen/SwiftMaterialKeyboard.git", :tag => "#{s.version}" }
+s.source = { :git => "https://github.com/chinhnguyen/SwiftMaterialKeyboard.git", :tag => "#{s.version}" }
 s.framework = "UIKit"
 s.dependency 'SnapKit', '~> 4.0'
 s.dependency 'RxSwift', '~> 4.0'
