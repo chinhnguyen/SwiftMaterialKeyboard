@@ -9,7 +9,7 @@
 import Foundation
 import Material
 
-class KeyboardTheme {
+open class KeyboardTheme {
     var primary: ColorPalette.Type {
         return Color.teal.self
     }

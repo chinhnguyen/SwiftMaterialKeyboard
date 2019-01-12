@@ -15,7 +15,7 @@ import Material
 let keyboardIconSize: CGFloat = 24.0
 
 /// The base class for all keyboards, should not use this instance directly but via one of its child classes.
-class MaterialKeyboard: Material.View {
+open class MaterialKeyboard: Material.View {
     let disposeBag = DisposeBag()
     
     // MARK: - Styling
@@ -44,7 +44,7 @@ class MaterialKeyboard: Material.View {
     /// Total width of the keyboard
     var expectedHeight: Int { return (Int(keySize.height) + keyMarginX2) * rowCount  + borderThickness * 2 + keyMarginX2 }
     
-    override var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         return CGSize(width: expectedWidth, height: expectedHeight)
     }
     
@@ -93,7 +93,7 @@ class MaterialKeyboard: Material.View {
     // MARK: - Layout
     
     /// Layout buttons as configured.
-    override func prepare() {
+    override open func prepare() {
         super.prepare()
         
         clipsToBounds = true

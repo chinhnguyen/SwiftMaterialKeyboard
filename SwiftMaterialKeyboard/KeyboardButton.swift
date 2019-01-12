@@ -7,12 +7,10 @@
 //
 
 import Foundation
-import SnapKit
-import RxSwift
 import Material
 
 /// Generic keyboard button
-class KeyboardButton: RaisedButton {
+open class KeyboardButton: RaisedButton {
     var theme = KeyboardTheme()
     var action: KeyAction? = nil
     var row: Int = 0
@@ -28,7 +26,7 @@ class KeyboardButton: RaisedButton {
         setTitleColor(theme.warn.base, for: .highlighted)
     }
     
-    override var isEnabled: Bool {
+    override open var isEnabled: Bool {
         didSet {
             alpha = isEnabled ? 1.0 : 0.25
         }
