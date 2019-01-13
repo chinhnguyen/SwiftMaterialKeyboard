@@ -1,6 +1,7 @@
 use_frameworks!
 
 target 'SwiftMaterialKeyboard_Example' do
+  pod 'FontAwesomeKit'
   pod 'SwiftMaterialKeyboard', :path => '../'
 
   target 'SwiftMaterialKeyboard_Tests' do

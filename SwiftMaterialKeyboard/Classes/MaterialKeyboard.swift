@@ -51,18 +51,19 @@ open class MaterialKeyboard: Material.View {
     // MARK: - Buttons
 
     /// Child class provide its own definition for buttons.
-    open var buttons: [KeyboardButton] { return [] }
-//    func createButtons() -> [KeyboardButton] { return [] }
+    open lazy var buttons: [KeyboardButton] = { return createButtons() }()
+    open func createButtons() -> [KeyboardButton] {
+        return []
+    }
     
     /// Return the common return button.
-    open lazy var returnButton: KeyboardButton? = { return createReturnButton() }()
-    func createReturnButton() -> KeyboardButton? { return nil }
-    
-    open lazy var caplockButton: KeyboardButton? = { return createCaplockButton() }()
-    func createCaplockButton() -> KeyboardButton? { return nil }
+    open lazy var returnButton: KeyboardButton? = nil
+
+    /// Caplocks indicator
+    open lazy var caplockButton: KeyboardButton? = nil
 
     /// The navigation handler
-    lazy var navigationHandler: KeyNavigationHandler = { return KeyNavigationHandler() }()
+    lazy var navigationHandler: KeyNavigationHandler = KeyNavigationHandler()
     
     // MARK: - Input fields
     

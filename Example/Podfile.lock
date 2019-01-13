@@ -1,4 +1,25 @@
 PODS:
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Material (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
   - Material/Core (2.16.4):
@@ -19,10 +40,12 @@ PODS:
     - SnapKit (~> 4.0)
 
 DEPENDENCIES:
+  - FontAwesomeKit
   - SwiftMaterialKeyboard (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FontAwesomeKit
     - Material
     - Motion
     - RxAtomic
@@ -35,14 +58,15 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftMaterialKeyboard: bde06915ffe03ae2f07f29b9926c857e34db340d
+  SwiftMaterialKeyboard: 4dc1a6a824996a3a68cf21459dae0c0452b22781
 
-PODFILE CHECKSUM: b330a6d32837c89727fa0e2d1e728645b3476989
+PODFILE CHECKSUM: ece81a76279e50799e3e9c0f1e29b3e2c4a9199f
 
 COCOAPODS: 1.5.3

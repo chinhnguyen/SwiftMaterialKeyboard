@@ -12,11 +12,11 @@ import Material
 /// Generic keyboard button
 open class KeyboardButton: RaisedButton {
     var theme = KeyboardTheme()
-    var action: KeyAction? = nil
-    var row: Int = 0
-    var column: Int = 0
-    var rowSpan: Int = 1
-    var columnSpan: Int = 1
+    open var action: KeyAction? = nil
+    open var row: Int = 0
+    open var column: Int = 0
+    open var rowSpan: Int = 1
+    open var columnSpan: Int = 1
     
     open override func prepare() {
         super.prepare()
@@ -44,7 +44,7 @@ extension KeyboardButton {
     ///   - rowSpan: The row span.
     ///   - columnSpan: The column span.
     ///   - action: The action to be performed, nil equal to normal key action with title as key.
-    static func create(for title: String, row: Int, column: Int, rowSpan: Int = 1, columnSpan: Int = 1, action: KeyAction? = nil) -> KeyboardButton {
+    public static func create(for title: String, row: Int, column: Int, rowSpan: Int = 1, columnSpan: Int = 1, action: KeyAction? = nil) -> KeyboardButton {
         let button = KeyboardButton()
         button.setTitle(title, for: .normal)
         button.action = action ?? KeyAction.char(title)
@@ -54,26 +54,6 @@ extension KeyboardButton {
         button.columnSpan = columnSpan
         return button
     }
-    
-    /// Init for normal keyboard.
-    ///
-    /// - Parameters:
-    ///   - icon: The GMDIcon to be displayed.
-    ///   - row: The row to be displayed.
-    ///   - column: The column to be displayed
-    ///   - rowSpan: The row span.
-    ///   - columnSpan: The column span.
-    ///   - action: The action to be performed.
-//    static func create(for icon: @autoclosure () -> FAKIcon, row: Int, column: Int, rowSpan: Int = 1, columnSpan: Int = 1, action: KeyAction? = nil) -> KeyboardButton {
-//        let button = KeyboardButton()
-//        button.set(icon: icon())
-//        button.action = action
-//        button.row = row
-//        button.column = column
-//        button.rowSpan = rowSpan
-//        button.columnSpan = columnSpan
-//        return button
-//    }
 }
 
 // MARK: - Key Action definitions
@@ -128,7 +108,7 @@ typealias KeyCustomHandler = () -> Void
 /// - backspace: Remove the last char at the end of text.
 /// - add: Add 1, the text field handler should take care of this.
 /// - minus: Minus 2, the text field handler should take care of this.
-enum KeyAction {
+public enum KeyAction {
     case char(_: String)
     case clear
     case caplock

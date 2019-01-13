@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		260665410A47495773E4F8D0 /* Pods_SwiftMaterialKeyboard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273E710FE065C6CE9DA753C4 /* Pods_SwiftMaterialKeyboard_Tests.framework */; };
+		5484CCC521EB3F1A004E9EF7 /* KeyboardButton+FAK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5484CCC421EB3F1A004E9EF7 /* KeyboardButton+FAK.swift */; };
+		5484CCC721EB40A8004E9EF7 /* PinPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5484CCC621EB40A8004E9EF7 /* PinPad.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		12D95A35283233F3463086EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		273E710FE065C6CE9DA753C4 /* Pods_SwiftMaterialKeyboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMaterialKeyboard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5484CCC421EB3F1A004E9EF7 /* KeyboardButton+FAK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardButton+FAK.swift"; sourceTree = "<group>"; };
+		5484CCC621EB40A8004E9EF7 /* PinPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPad.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftMaterialKeyboard_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMaterialKeyboard_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				5484CCC421EB3F1A004E9EF7 /* KeyboardButton+FAK.swift */,
+				5484CCC621EB40A8004E9EF7 /* PinPad.swift */,
 			);
 			name = "Example for SwiftMaterialKeyboard";
 			path = SwiftMaterialKeyboard;
@@ -268,6 +274,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftMaterialKeyboard_Example/Pods-SwiftMaterialKeyboard_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -278,6 +285,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -336,6 +344,8 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				5484CCC721EB40A8004E9EF7 /* PinPad.swift in Sources */,
+				5484CCC521EB3F1A004E9EF7 /* KeyboardButton+FAK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -503,6 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

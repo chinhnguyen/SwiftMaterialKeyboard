@@ -22,7 +22,7 @@ pod 'SwiftMaterialKeyboard'
 
 ## Author
 
-chinhnguyen, chinh@smarp.com
+Chinh Nguyen, chinh@willbe.vn
 
 ## License
 
