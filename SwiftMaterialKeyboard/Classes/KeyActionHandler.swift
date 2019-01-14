@@ -16,7 +16,7 @@ public protocol KeyActionHandler {
 
 /// For handling fields navigation (tab)
 open class KeyNavigationHandler {
-    var textFields: [UITextField] = []
+    public var textFields: [UITextField] = []
     func move(nextOf field: UITextField?) -> UITextField? {
         // No given field, just try to return the first element on list
         guard let field = field else { return textFields.first }
