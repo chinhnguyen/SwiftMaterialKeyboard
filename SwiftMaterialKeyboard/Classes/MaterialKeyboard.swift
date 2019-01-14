@@ -37,10 +37,10 @@ open class MaterialKeyboard: Material.View {
     open var borderThickness: Int = 4
     
     /// Total width of the keyboard
-    var expectedWidth: Int { return (Int(keySize.width) + keyMarginX2) * columnCount + borderThickness * 2 + keyMarginX2 }
+    open var expectedWidth: Int { return (Int(keySize.width) + keyMarginX2) * columnCount + borderThickness * 2 + keyMarginX2 }
     
     /// Total width of the keyboard
-    var expectedHeight: Int { return (Int(keySize.height) + keyMarginX2) * rowCount  + borderThickness * 2 + keyMarginX2 }
+    open var expectedHeight: Int { return (Int(keySize.height) + keyMarginX2) * rowCount  + borderThickness * 2 + keyMarginX2 }
     
     override open var intrinsicContentSize: CGSize {
         return CGSize(width: expectedWidth, height: expectedHeight)
@@ -67,7 +67,7 @@ open class MaterialKeyboard: Material.View {
     open lazy var caplockButton: KeyboardButton? = { return createCaplockButton() }()
 
     /// The navigation handler
-    lazy var navigationHandler: KeyNavigationHandler = KeyNavigationHandler()
+    open lazy var navigationHandler: KeyNavigationHandler = KeyNavigationHandler()
     
     // MARK: - Input fields
     
