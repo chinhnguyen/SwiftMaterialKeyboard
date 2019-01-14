@@ -12,8 +12,6 @@ import RxSwift
 import RxCocoa
 import Material
 
-let keyboardIconSize: CGFloat = 24.0
-
 /// The base class for all keyboards, should not use this instance directly but via one of its child classes.
 open class MaterialKeyboard: Material.View {
     let disposeBag = DisposeBag()
