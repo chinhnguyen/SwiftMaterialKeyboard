@@ -57,10 +57,16 @@ open class MaterialKeyboard: Material.View {
     }
     
     /// Return the common return button.
-    open lazy var returnButton: KeyboardButton? = nil
+    open lazy var returnButton: KeyboardButton? = { return createReturnButton() }()
+    open func createReturnButton() -> KeyboardButton? {
+        return nil
+    }
 
     /// Caplocks indicator
-    open lazy var caplockButton: KeyboardButton? = nil
+    open func createCaplockButton() -> KeyboardButton? {
+        return nil
+    }
+    open lazy var caplockButton: KeyboardButton? = { return createCaplockButton() }()
 
     /// The navigation handler
     lazy var navigationHandler: KeyNavigationHandler = KeyNavigationHandler()

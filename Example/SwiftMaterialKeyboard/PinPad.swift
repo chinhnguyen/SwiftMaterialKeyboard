@@ -13,6 +13,11 @@ import FontAwesomeKit
 class PinPad: MaterialKeyboard {
     override var rowCount: Int { return 4 }
     override var columnCount: Int { return 4 }
+    
+    override func createReturnButton() -> KeyboardButton? {
+        return KeyboardButton.create(for: FAKMaterialIcons.longArrowReturnIcon(withSize: 24), row: 2, column: 3, rowSpan: 2)
+    }
+    
     override func createButtons() -> [KeyboardButton] {
         let prev = KeyboardButton.create(for: FAKMaterialIcons.longArrowTabIcon(withSize: 24), row: 0, column: 3, action: .next)
         prev.transform = CGAffineTransform(rotationAngle: .pi)
@@ -31,7 +36,7 @@ class PinPad: MaterialKeyboard {
             KeyboardButton.create(for: FAKMaterialIcons.arrowLeftIcon(withSize: 24), row: 3, column: 2, action: .backspace),
             prev,
             KeyboardButton.create(for: FAKMaterialIcons.longArrowTabIcon(withSize: 24), row: 1, column: 3, action: .next),
-            KeyboardButton.create(for: FAKMaterialIcons.longArrowReturnIcon(withSize: 24), row: 2, column: 3, rowSpan: 2)
+            self.returnButton!
         ]
     }
 }

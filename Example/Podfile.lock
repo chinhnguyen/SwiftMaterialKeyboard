@@ -33,7 +33,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SnapKit (4.2.0)
-  - SwiftMaterialKeyboard (0.1.5):
+  - SwiftMaterialKeyboard (0.1.8):
     - Material (~> 2.12)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
@@ -65,7 +65,7 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftMaterialKeyboard: 4dc1a6a824996a3a68cf21459dae0c0452b22781
+  SwiftMaterialKeyboard: 7f18049c4b7971ed70ae0445625ec81edb833f20
 
 PODFILE CHECKSUM: ece81a76279e50799e3e9c0f1e29b3e2c4a9199f
 
